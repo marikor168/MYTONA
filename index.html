@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Seekers Notes</title>
+  <style>
+    body {
+      /* background: url('./img/bg_ho.png') no-repeat center center fixed;
+      background-size: cover; */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+    }
+
+    .bgc {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1
+    }
+
+    .tutorial {
+      background: url('img/Tutorial1.png') center center no-repeat;
+      background-size: contain;
+      width: 200px;
+      /* width: 25%; */
+      margin: 7px 0;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 57px;
+      padding-bottom: 40px;
+      position: absolute;
+    }
+
+    .tutorial__title {
+      text-transform: uppercase;
+      color: #460000;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .objects {
+      display: flex;
+      background: url('img/ho_gui.png') center center no-repeat;
+      background-size: cover;
+      width: 80%;
+      /* width: 1000px; */
+      justify-content: space-around;
+      align-items: center;
+      position: absolute;
+      bottom: 0;
+    }
+
+    .objects__item {
+      color: #4f0101;
+      font-size: 20px;
+      margin-bottom: 25px;
+      margin-top: 35px;
+    }
+
+    .mirror {
+      width: 6%;
+      height: 13%;
+      position: absolute;
+      top: 35%;
+      left: 18%;
+    }
+
+    .mirror_cover {
+      width: 8.6%;
+      height: 11.5%;
+      position: absolute;
+      top: 39%;
+      left: 19.1%;
+    }
+
+    .parfume {
+      width: 6%;
+      height: 12%;
+      position: absolute;
+      top: 60%;
+      left: 27%;
+      transform: rotate(20deg);
+    }
+
+    .parfume_cover {
+      width: 5.5%;
+      height: 9.6%;
+      position: absolute;
+      top: 65.9%;
+      left: 26.5%;
+    }
+
+    .balerina {
+      width: 6%;
+      height: 17%;
+      position: absolute;
+      top: 40.5%;
+      left: 52.5%;
+    } 
+
+    .comb {
+      width: 5%;
+      height: 7.5%;
+      position: absolute;
+      top: 46%;
+      left: 85%;
+      transform: rotate(20deg);
+    }
+
+    .comb_cover {
+      width: 6.5%;
+      height: 7.5%;
+      position: absolute;
+      top: 45%;
+      left: 86.8%;
+    }
+  </style>
+</head>
+
+<body>
+  <img src="./img/bg_ho.png" alt="bgc" class="bgc">
+  <img src="./img/mirror.png" alt="mirror" class="mirror">
+  <img src="./img/balerina.png" alt="balerina" class="balerina">
+  <img src="./img/comb.png" alt="comb" class="comb">
+  <img src="./img/parfume.png" alt="parfume" class="parfume">
+
+  <img src="./img/mirror_cover.png" alt="mirror_cover" class="mirror_cover">
+  <img src="./img/parfume_cover.png" alt="parfume_cover" class="parfume_cover">
+  <img src="./img/comb_cover.png" alt="comb_cover" class="comb_cover">
+
+
+  <div class="tutorial">
+    <div class="tutorial__title">Find all the hidden objects!</div>
+  </div>
+  <div class="objects">
+    <div class="objects__item">Mirror</div>
+    <div class="objects__item">Ballet Dancer</div>
+    <div class="objects__item">Perfume</div>
+    <div class="objects__item">Comb</div>
+  </div>
+
+
+  <script>
+    let mirror = document.querySelector('.mirror'),
+        parfume = document.querySelector('.parfume'),
+        balerina = document.querySelector('.balerina'),
+        comb = document.querySelector('.comb'),
+        objects = document.querySelectorAll('.objects__item');
+
+    mirror.addEventListener('click', function() {
+      mirror.style.display = 'none';
+      objects[0].style.textDecoration = 'line-through';
+    });
+
+    balerina.addEventListener('click', function() {
+      balerina.style.display = 'none';
+      objects[1].style.textDecoration = 'line-through';
+    });
+
+    parfume.addEventListener('click', function() {
+      parfume.style.display = 'none';
+      objects[2].style.textDecoration = 'line-through';
+    });
+
+    comb.addEventListener('click', function() {
+      comb.style.display = 'none';
+      objects[3].style.textDecoration = 'line-through';
+    });
+  </script>
+</body>
+
+</html>
