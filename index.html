@@ -44,24 +44,27 @@
       text-align: center;
     }
 
-    .objects {
+    .wrapper {
       display: flex;
-      background: url('img/ho_gui.png') center center no-repeat;
-      background-size: cover;
-      width: 80%;
-      /* width: 1000px; */
-      justify-content: space-around;
-      align-items: center;
+      width: 60%;
+      justify-content: space-between;
       position: absolute;
       bottom: 0;
+      margin-bottom: 1.5%;
     }
 
-    .objects__item {
+    .object {
       color: #4f0101;
       font-size: 20px;
-      margin-bottom: 25px;
-      margin-top: 35px;
     }
+
+    .footer {
+      position: absolute;
+      bottom: 0;
+      width: 70%;
+    }
+
+    /* var1 */
 
     .mirror {
       width: 6%;
@@ -102,7 +105,7 @@
       position: absolute;
       top: 40.5%;
       left: 52.5%;
-    } 
+    }
 
     .comb {
       width: 5%;
@@ -120,57 +123,273 @@
       top: 45%;
       left: 86.8%;
     }
+
+    /* var2 */
+    .playing_card {
+      width: 3.5%;
+      height: 10%;
+      position: absolute;
+      top: 49.8%;
+      left: 80.5%;
+      transform: rotate(-50deg);
+    }
+
+    .playing_card_cover {
+      width: 11.3%;
+      height: 30%;
+      position: absolute;
+      top: 44.9%;
+      left: 82.1%;
+    }
+
+    .purse {
+      width: 6%;
+      height: 12%;
+      position: absolute;
+      top: 60%;
+      left: 27%;
+      transform: rotate(20deg);
+    }
+
+    .purse_cover {
+      width: 6.8%;
+      height: 10.5%;
+      position: absolute;
+      top: 65.1%;
+      left: 26.3%;
+    }
+
+    .glass_bird {
+      width: 8%;
+      height: 11%;
+      position: absolute;
+      top: 22%;
+      left: 24.2%;
+    }
+
+    .apple {
+      width: 4.5%;
+      height: 9%;
+      position: absolute;
+      top: 49%;
+      left: 61%;
+    }
+
+    .apple_cover {
+      width: 6.3%;
+      height: 7.7%;
+      position: absolute;
+      top: 53.7%;
+      left: 57.8%;
+    }
+
+    /* var3 */
+
+    .book {
+      width: 6%;
+      height: 8%;
+      position: absolute;
+      top: 58.5%;
+      left: 66.5%;
+      transform: rotate(-5deg);
+    }
+
+    .book_cover {
+      width: 5.8%;
+      height: 11%;
+      position: absolute;
+      top: 57.2%;
+      left: 69%;
+    }
+
+    .basket {
+      width: 6%;
+      height: 13%;
+      position: absolute;
+      top: 45%;
+      left: 49%;
+    }    
+
+    .fan {
+      width: 10%;
+      height: 9%;
+      position: absolute;
+      top: 50%;
+      left: 30%;
+      transform: rotate(-155deg);
+    }
+
+    .fan_cover1 {
+      /* width: 10.9%;
+      height: 14%;
+      position: absolute;
+      top: 48.5%;
+      left: 30.1%; */
+
+      width: 5.7%;
+      height: 13.8%;
+      position: absolute;
+      top: 49.4%;
+      left: 29.4%;
+    }
+
+    .fan_cover2 {
+      width: 3.4%;
+      height: 5.2%;
+      position: absolute;
+      top: 49%;
+      left: 34.6%;
+    }
+
+    .shoe {
+      width: 8%;
+      height: 9.5%;
+      position: absolute;
+      top: 78%;
+      left: 52%;
+      transform: scale(-1, 1);
+    }    
+
+    .var1 {
+      display: none;
+    }
+
+    .var2 {
+      display: none;
+    }
   </style>
 </head>
 
 <body>
   <img src="./img/bg_ho.png" alt="bgc" class="bgc">
-  <img src="./img/mirror.png" alt="mirror" class="mirror">
-  <img src="./img/balerina.png" alt="balerina" class="balerina">
-  <img src="./img/comb.png" alt="comb" class="comb">
-  <img src="./img/parfume.png" alt="parfume" class="parfume">
 
-  <img src="./img/mirror_cover.png" alt="mirror_cover" class="mirror_cover">
-  <img src="./img/parfume_cover.png" alt="parfume_cover" class="parfume_cover">
-  <img src="./img/comb_cover.png" alt="comb_cover" class="comb_cover">
+  <!-- first play -->
+  <img src="./img/mirror.png" alt="mirror" class="mirror var1">
+  <img src="./img/balerina.png" alt="balerina" class="balerina var1">
+  <img src="./img/comb.png" alt="comb" class="comb var1">
+  <img src="./img/parfume.png" alt="parfume" class="parfume var1">
 
+  <img src="./img/mirror_cover.png" alt="mirror_cover" class="mirror_cover var1">
+  <img src="./img/parfume_cover.png" alt="parfume_cover" class="parfume_cover var1">
+  <img src="./img/comb_cover.png" alt="comb_cover" class="comb_cover var1">
+
+  <!-- second play -->
+  <img src="./img/playing_card.png" alt="playing_card" class="playing_card var2">
+  <img src="./img/purse.png" alt="purse" class="purse var2">
+  <img src="./img/glass_bird.png" alt="glass_bird" class="glass_bird var2">
+  <img src="./img/apple.png" alt="apple" class="apple var2">
+
+  <img src="./img/playing_card_cover.png" alt="playing_card_cover" class="playing_card_cover var2">
+  <img src="./img/purse_cover.png" alt="purse_cover" class="purse_cover var2">
+  <img src="./img/apple_cover.png" alt="apple_cover" class="apple_cover var2">
+
+  <!-- third play  -->
+  <img src="./img/book.png" alt="book" class="book var3">
+  <img src="./img/basket.png" alt="basket" class="basket var3">
+  <img src="./img/fan.png" alt="fan" class="fan var3">
+  <img src="./img/shoe.png" alt="shoe" class="shoe var3">
+
+  <img src="./img/book_cover.png" alt="book_cover" class="book_cover var3">
+  <img src="./img/fan_cover1.png" alt="fan_cover" class="fan_cover1 var3">
+  <img src="./img/fan_cover2.png" alt="fan_cover" class="fan_cover2 var3">
+  <!-- <img src="./img/fan_cover2.png" alt="fan_cover" class="fan_cover var3"> -->
 
   <div class="tutorial">
     <div class="tutorial__title">Find all the hidden objects!</div>
   </div>
-  <div class="objects">
-    <div class="objects__item">Mirror</div>
-    <div class="objects__item">Ballet Dancer</div>
-    <div class="objects__item">Perfume</div>
-    <div class="objects__item">Comb</div>
+
+  <img src="./img/ho_gui.png" alt="footer" class="footer">
+  <div class="wrapper">
+    <div class="object var1">Mirror</div>
+    <div class="object var1">Ballet Dancer</div>
+    <div class="object var1">Perfume</div>
+    <div class="object var1">Comb</div>
+
+    <div class="object var2">Playing card</div>
+    <div class="object var2">Purse</div>
+    <div class="object var2">Glass bird</div>
+    <div class="object var2">Apple</div>
+
+    <div class="object var3">Book</div>
+    <div class="object var3">Basket</div>
+    <div class="object var3">Fan</div>
+    <div class="object var3">Shoe</div>
   </div>
 
 
   <script>
     let mirror = document.querySelector('.mirror'),
-        parfume = document.querySelector('.parfume'),
-        balerina = document.querySelector('.balerina'),
-        comb = document.querySelector('.comb'),
-        objects = document.querySelectorAll('.objects__item');
+      parfume = document.querySelector('.parfume'),
+      balerina = document.querySelector('.balerina'),
+      comb = document.querySelector('.comb'),
+      playingCard = document.querySelector('.playing_card'),
+      purse = document.querySelector('.purse'),
+      glassBird = document.querySelector('.glass_bird'),
+      apple = document.querySelector('.apple'),
+      book = document.querySelector('.book'),
+      basket = document.querySelector('.basket'),
+      fan = document.querySelector('.fan'),
+      shoe = document.querySelector('.shoe'),
+      objects = document.querySelectorAll('.object');
 
-    mirror.addEventListener('click', function() {
+    mirror.addEventListener('click', function () {
       mirror.style.display = 'none';
       objects[0].style.textDecoration = 'line-through';
     });
 
-    balerina.addEventListener('click', function() {
+    balerina.addEventListener('click', function () {
       balerina.style.display = 'none';
       objects[1].style.textDecoration = 'line-through';
     });
 
-    parfume.addEventListener('click', function() {
+    parfume.addEventListener('click', function () {
       parfume.style.display = 'none';
       objects[2].style.textDecoration = 'line-through';
     });
 
-    comb.addEventListener('click', function() {
+    comb.addEventListener('click', function () {
       comb.style.display = 'none';
       objects[3].style.textDecoration = 'line-through';
+    });
+
+    playingCard.addEventListener('click', function () {
+      playingCard.style.display = 'none';
+      objects[4].style.textDecoration = 'line-through';
+    });
+
+    purse.addEventListener('click', function () {
+      purse.style.display = 'none';
+      objects[5].style.textDecoration = 'line-through';
+    });
+
+    glassBird.addEventListener('click', function () {
+      glassBird.style.display = 'none';
+      objects[6].style.textDecoration = 'line-through';
+    });
+
+    apple.addEventListener('click', function () {
+      apple.style.display = 'none';
+      objects[7].style.textDecoration = 'line-through';
+    });
+
+    book.addEventListener('click', function () {
+      book.style.display = 'none';
+      objects[8].style.textDecoration = 'line-through';
+    });
+
+    basket.addEventListener('click', function () {
+      basket.style.display = 'none';
+      objects[9].style.textDecoration = 'line-through';
+    });
+
+    fan.addEventListener('click', function () {
+      fan.style.display = 'none';
+      objects[10].style.textDecoration = 'line-through';
+    });
+
+    shoe.addEventListener('click', function () {
+      shoe.style.display = 'none';
+      objects[11].style.textDecoration = 'line-through';
     });
   </script>
 </body>
