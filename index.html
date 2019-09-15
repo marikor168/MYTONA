@@ -7,6 +7,63 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Seekers Notes</title>
   <style>
+    @keyframes pulse {
+      from {
+        transform: scale3d(1, 1, 1)
+      }
+
+      50% {
+        transform: scale3d(1.05, 1.05, 1.05)
+      }
+
+      to {
+        transform: scale3d(1, 1, 1)
+      }
+    }
+
+    .pulse {
+      animation-name: pulse;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes fadeOut {
+      from {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+        z-index: 4;
+      }
+
+      50% {
+        transform: scale3d(1.25, 1.25, 1.25)
+      }
+
+      to {
+        transform: scale3d(1.5, 1.5, 1.5);
+        opacity: 0;
+      }
+    }
+
+    .fadeOut {
+      animation-name: fadeOut;
+      animation-duration: 1.5s;
+    }
+
+    @keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
+}
+
     body {
       /* background: url('./img/bg_ho.png') no-repeat center center fixed;
       background-size: cover; */
@@ -16,22 +73,22 @@
       margin: 0;
     }
 
-    .bgc {
+    .bg {
       position: absolute;
       width: 100%;
       height: 100%;
-      z-index: -1
+      z-index: -1;
     }
 
     .tutorial {
-      background: url('img/Tutorial1.png') center center no-repeat;
+      background: url('img/Tutorial1.png') top center no-repeat;
       background-size: contain;
-      width: 200px;
-      /* width: 25%; */
-      margin: 7px 0;
+      width: 20%;
+      margin: 0;
+      margin-top: 10px;
       padding-left: 50px;
       padding-right: 50px;
-      padding-top: 57px;
+      padding-top: 6%;
       padding-bottom: 40px;
       position: absolute;
     }
@@ -39,23 +96,23 @@
     .tutorial__title {
       text-transform: uppercase;
       color: #460000;
-      font-size: 20px;
+      font-size: 14px;
       font-weight: bold;
       text-align: center;
     }
 
     .wrapper {
       display: flex;
-      width: 60%;
+      width: 55%;
       justify-content: space-between;
       position: absolute;
       bottom: 0;
-      margin-bottom: 1.5%;
+      margin-bottom: 1.2%;
     }
 
     .object {
       color: #4f0101;
-      font-size: 20px;
+      font-size: 15px;
     }
 
     .footer {
@@ -83,12 +140,11 @@
     }
 
     .parfume {
-      width: 6%;
-      height: 12%;
+      width: 7%;
+      height: 13%;
       position: absolute;
       top: 60%;
       left: 27%;
-      transform: rotate(20deg);
     }
 
     .parfume_cover {
@@ -113,7 +169,6 @@
       position: absolute;
       top: 46%;
       left: 85%;
-      transform: rotate(20deg);
     }
 
     .comb_cover {
@@ -126,12 +181,11 @@
 
     /* var2 */
     .playing_card {
-      width: 3.5%;
-      height: 10%;
+      width: 5%;
+      height: 9%;
       position: absolute;
       top: 49.8%;
-      left: 80.5%;
-      transform: rotate(-50deg);
+      left: 79.5%;
     }
 
     .playing_card_cover {
@@ -143,12 +197,11 @@
     }
 
     .purse {
-      width: 6%;
-      height: 12%;
+      width: 7.3%;
+      height: 13%;
       position: absolute;
-      top: 60%;
+      top: 58%;
       left: 27%;
-      transform: rotate(20deg);
     }
 
     .purse_cover {
@@ -208,24 +261,17 @@
       position: absolute;
       top: 45%;
       left: 49%;
-    }    
+    }
 
     .fan {
-      width: 10%;
-      height: 9%;
+      width: 9%;
+      height: 12%;
       position: absolute;
-      top: 50%;
-      left: 30%;
-      transform: rotate(-155deg);
+      top: 50.5%;
+      left: 32%;
     }
 
     .fan_cover1 {
-      /* width: 10.9%;
-      height: 14%;
-      position: absolute;
-      top: 48.5%;
-      left: 30.1%; */
-
       width: 5.7%;
       height: 13.8%;
       position: absolute;
@@ -247,35 +293,67 @@
       position: absolute;
       top: 78%;
       left: 52%;
-      transform: scale(-1, 1);
-    }    
+    }
+
+    .win {
+      display: none;
+      z-index: 10;
+    }
+
+    .logo {
+      display: block;
+      width: 70%;
+      margin: 20px auto;
+      margin-bottom: 0px;
+    }
+
+    .button {
+      background: url('./img/button.png') center center no-repeat;
+      background-size: contain;
+      border: none;
+      color: #0d2900;
+      font-size: 30px;
+      line-height: 10.82px;
+      text-transform: uppercase;
+      padding: 40px 75px;
+      display: block;
+      margin: 0 auto;
+      outline: none;
+    }
+
+    .google {
+      display: block;
+      margin: 0 auto;
+      width: 15%;
+      margin-top: 10px;
+    }
+
+    /* .var3 {
+      display: none;
+    }
 
     .var1 {
       display: none;
-    }
-
-    .var2 {
-      display: none;
-    }
+    } */
   </style>
 </head>
 
 <body>
-  <img src="./img/bg_ho.png" alt="bgc" class="bgc">
+  <img src="./img/bg_ho.png" alt="bg" class="bg">
 
   <!-- first play -->
   <img src="./img/mirror.png" alt="mirror" class="mirror var1">
   <img src="./img/balerina.png" alt="balerina" class="balerina var1">
-  <img src="./img/comb.png" alt="comb" class="comb var1">
-  <img src="./img/parfume.png" alt="parfume" class="parfume var1">
+  <img src="./img/comb_rotate.png" alt="comb" class="comb var1">
+  <img src="./img/parfume_rotate.png" alt="parfume" class="parfume var1">
 
   <img src="./img/mirror_cover.png" alt="mirror_cover" class="mirror_cover var1">
   <img src="./img/parfume_cover.png" alt="parfume_cover" class="parfume_cover var1">
   <img src="./img/comb_cover.png" alt="comb_cover" class="comb_cover var1">
 
   <!-- second play -->
-  <img src="./img/playing_card.png" alt="playing_card" class="playing_card var2">
-  <img src="./img/purse.png" alt="purse" class="purse var2">
+  <img src="./img/playing_card_rotate.png" alt="playing_card" class="playing_card var2">
+  <img src="./img/purse_rotate.png" alt="purse" class="purse var2">
   <img src="./img/glass_bird.png" alt="glass_bird" class="glass_bird var2">
   <img src="./img/apple.png" alt="apple" class="apple var2">
 
@@ -286,38 +364,48 @@
   <!-- third play  -->
   <img src="./img/book.png" alt="book" class="book var3">
   <img src="./img/basket.png" alt="basket" class="basket var3">
-  <img src="./img/fan.png" alt="fan" class="fan var3">
-  <img src="./img/shoe.png" alt="shoe" class="shoe var3">
+  <img src="./img/fan_rotate.png" alt="fan" class="fan var3">
+  <img src="./img/shoe_scale.png" alt="shoe" class="shoe var3">
 
   <img src="./img/book_cover.png" alt="book_cover" class="book_cover var3">
   <img src="./img/fan_cover1.png" alt="fan_cover" class="fan_cover1 var3">
   <img src="./img/fan_cover2.png" alt="fan_cover" class="fan_cover2 var3">
   <!-- <img src="./img/fan_cover2.png" alt="fan_cover" class="fan_cover var3"> -->
 
-  <div class="tutorial">
+  <div class="tutorial pulse">
     <div class="tutorial__title">Find all the hidden objects!</div>
   </div>
 
   <img src="./img/ho_gui.png" alt="footer" class="footer">
   <div class="wrapper">
-    <div class="object var1">Mirror</div>
-    <div class="object var1">Ballet Dancer</div>
-    <div class="object var1">Perfume</div>
-    <div class="object var1">Comb</div>
+    <div class="object var1 game1">Mirror</div>
+    <div class="object var1 game1">Ballet Dancer</div>
+    <div class="object var1 game1">Perfume</div>
+    <div class="object var1 game1">Comb</div>
 
-    <div class="object var2">Playing card</div>
-    <div class="object var2">Purse</div>
-    <div class="object var2">Glass bird</div>
-    <div class="object var2">Apple</div>
+    <div class="object var2 game2">Playing card</div>
+    <div class="object var2 game2">Purse</div>
+    <div class="object var2 game2">Glass bird</div>
+    <div class="object var2 game2">Apple</div>
 
-    <div class="object var3">Book</div>
-    <div class="object var3">Basket</div>
-    <div class="object var3">Fan</div>
-    <div class="object var3">Shoe</div>
+    <div class="object var3 game3">Book</div>
+    <div class="object var3 game3">Basket</div>
+    <div class="object var3 game3">Fan</div>
+    <div class="object var3 game3">Shoe</div>
+  </div>
+
+  <div class="win">
+    <img src="./img/bg_blur.png" alt="bg" class="bg">
+    <img src="./img/logo.png" alt="logo" class="logo">
+    <button class="button fadeIn">Play free</button>
+    <img src="./img/google.png" alt="google" class="google">
+
   </div>
 
 
   <script>
+
+
     let mirror = document.querySelector('.mirror'),
       parfume = document.querySelector('.parfume'),
       balerina = document.querySelector('.balerina'),
@@ -330,67 +418,186 @@
       basket = document.querySelector('.basket'),
       fan = document.querySelector('.fan'),
       shoe = document.querySelector('.shoe'),
-      objects = document.querySelectorAll('.object');
+      objects,
+      bg = document.querySelector('.bg'),
+      win = document.querySelector('.win');
 
-    mirror.addEventListener('click', function () {
-      mirror.style.display = 'none';
-      objects[0].style.textDecoration = 'line-through';
+    let all = [mirror, balerina, parfume, comb, playingCard, purse, glassBird, apple, book, basket, fan, shoe]
+    let option1 = [mirror, balerina, parfume, comb];
+    let option2 = [playingCard, purse, glassBird, apple];
+    let option3 = [book, basket, fan, shoe];
+    let option = [];
+
+    let game1 = document.querySelectorAll('.var1'),
+        game2 = document.querySelectorAll('.var2'),
+        game3 = document.querySelectorAll('.var3');
+
+        function startGame(game) {
+          game.forEach((item) => {
+          item.style.display = "block";
+        });
+        }
+        function endGame(game) {
+          game.forEach((item) => {
+          item.style.display = "none";
+        });
+        }
+
+        startGame(game1);
+        endGame(game3);
+        endGame(game2);
+
+        let objects1 = document.getElementsByClassName('.game1'),
+        objects2 = document.getElementsByClassName('.game2'),
+        objects3 = document.getElementsByClassName('.game3');
+
+        console.log(objects);
+        console.log(objects1);
+        console.log(objects2);
+        console.log(objects3);
+
+        if (game1[0].style.display != 'none') {
+          option = option1;
+          objects = objects1;
+          console.log(objects);
+          console.log('1111111111111');
+        } else if (game2[0].style.display != 'none') {
+          option = option2;
+          objects = objects2;
+          console.log(objects);
+          console.log('22222222');
+
+        } else if (game3[0].style.display != 'none') {
+          option = option3;
+          objects = objects3;
+          console.log(objects);
+          console.log('333333333');
+
+        }
+        console.log(objects);
+
+
+    all.forEach((item, i) => {
+      item.addEventListener('click', () => {
+        item.classList.add('fadeOut');
+        objects[i].style.textDecoration = 'line-through'
+        setTimeout(displayNone, 1500, item);
+        clearInterval(timerId);
+        timerId = setTimeout(help, 5000);
+        winner();
+      });
     });
 
-    balerina.addEventListener('click', function () {
-      balerina.style.display = 'none';
-      objects[1].style.textDecoration = 'line-through';
-    });
+    function displayNone(item) {
+      item.style.display = 'none';
+    }
 
-    parfume.addEventListener('click', function () {
-      parfume.style.display = 'none';
-      objects[2].style.textDecoration = 'line-through';
-    });
+    function help() {
+      for (i = 0; i < objects.length; i++) {
+        if (objects[i].style.textDecoration == '') {
+          option[i].classList.add('pulse');
+          break;
+        }
+      }
+    }
+    let timerId = setTimeout(help, 5000);
 
-    comb.addEventListener('click', function () {
-      comb.style.display = 'none';
-      objects[3].style.textDecoration = 'line-through';
-    });
+    function winner() {
+      let find = 0;
+      for (i = 0; i < objects.length; i++) {
+        if (objects[i].style.textDecoration != '') {
+          find += 1;
+        }
+        if (find == 4) {
+          win.style.display = 'block';
+        }
 
-    playingCard.addEventListener('click', function () {
-      playingCard.style.display = 'none';
-      objects[4].style.textDecoration = 'line-through';
-    });
+      }
+    }
 
-    purse.addEventListener('click', function () {
-      purse.style.display = 'none';
-      objects[5].style.textDecoration = 'line-through';
-    });
+    // mirror.addEventListener('click', () => {
+    //   mirror.classList.add('fadeOut');
+    //   objects[0].style.textDecoration = 'line-through';
+    //   setTimeout(displayNone, 1500, mirror);
+    //   setTimeout(help, 5000);
+    // });
 
-    glassBird.addEventListener('click', function () {
-      glassBird.style.display = 'none';
-      objects[6].style.textDecoration = 'line-through';
-    });
+    // balerina.addEventListener('click', () => {
+    //   balerina.classList.add('fadeOut');
+    //   objects[1].style.textDecoration = 'line-through';
+    //   setTimeout(displayNone, 1500, balerina);
+    //   setTimeout(help, 5000);
+    // });
 
-    apple.addEventListener('click', function () {
-      apple.style.display = 'none';
-      objects[7].style.textDecoration = 'line-through';
-    });
+    // parfume.addEventListener('click', () => {
+    //   parfume.classList.add('fadeOut');
+    //   objects[2].style.textDecoration = 'line-through';
+    //   setTimeout(displayNone, 1500, parfume);
+    //   setTimeout(help, 5000);
+    // });
 
-    book.addEventListener('click', function () {
-      book.style.display = 'none';
-      objects[8].style.textDecoration = 'line-through';
-    });
+    // comb.addEventListener('click', () => {
+    //   comb.classList.add('fadeOut');
+    //   objects[3].style.textDecoration = 'line-through';
+    //   setTimeout(displayNone, 1500, comb);
+    //   setTimeout(help, 5000);
+    // });
 
-    basket.addEventListener('click', function () {
-      basket.style.display = 'none';
-      objects[9].style.textDecoration = 'line-through';
-    });
+    // playingCard.addEventListener('click', () => {
+    //   playingCard.classList.add('fadeOut');
+    //   objects[0].style.textDecoration = 'line-through';
+    //   setTimeout(displayNone, 1500, playingCard);
+    //   setTimeout(help, 5000);
+    // });
 
-    fan.addEventListener('click', function () {
-      fan.style.display = 'none';
-      objects[10].style.textDecoration = 'line-through';
-    });
+    // purse.addEventListener('click', () => {
+    //   purse.classList.add('fadeOut');
+    //   objects[1].style.textDecoration = 'line-through';
+    //   setTimeout(displayNone, 1500, purse);
+    //   setTimeout(help, 5000);
+    // });
 
-    shoe.addEventListener('click', function () {
-      shoe.style.display = 'none';
-      objects[11].style.textDecoration = 'line-through';
-    });
+    // glassBird.addEventListener('click', () => {
+    //   glassBird.classList.add('fadeOut');
+    //   objects[2].style.textDecoration = 'line-through';
+    //   setTimeout(displayNone, 1500, glassBird);
+    //   setTimeout(help, 5000);
+    // });
+
+    // apple.addEventListener('click', () => {
+    //   apple.classList.add('fadeOut');
+    //   objects[3].style.textDecoration = 'line-through';
+    //   setTimeout(displayNone, 1500, apple);
+    //   setTimeout(help, 5000);
+    // });
+
+    // book.addEventListener('click', () => {
+    //   book.classList.add('fadeOut');
+    //   objects[0].style.textDecoration = 'line-through'
+    //   setTimeout(displayNone, 1500, book);
+    //   setTimeout(help, 5000);
+    // });
+
+    // basket.addEventListener('click', () => {
+    //   basket.classList.add('fadeOut');
+    //   objects[1].style.textDecoration = 'line-through';
+    //   setTimeout(displayNone, 1500, basket);
+    //   setTimeout(help, 5000);
+    // });
+
+    // fan.addEventListener('click', () => {
+    //   fan.classList.add('fadeOut');
+    //   objects[2].style.textDecoration = 'line-through'
+    //   setTimeout(displayNone, 1500, fan);
+    //   setTimeout(help, 5000);
+    // });
+
+    // shoe.addEventListener('click', () => {
+    //   shoe.classList.add('fadeOut');
+    //   objects[3].style.textDecoration = 'line-through'
+    //   setTimeout(displayNone, 1500, shoe);
+    //   setTimeout(help, 5000);
+    // });
   </script>
 </body>
 
