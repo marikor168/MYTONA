@@ -11,11 +11,9 @@
       from {
         transform: scale3d(1, 1, 1)
       }
-
       50% {
         transform: scale3d(1.05, 1.05, 1.05)
       }
-
       to {
         transform: scale3d(1, 1, 1)
       }
@@ -33,11 +31,9 @@
         transform: scale3d(1, 1, 1);
         z-index: 4;
       }
-
       50% {
         transform: scale3d(1.25, 1.25, 1.25)
       }
-
       to {
         transform: scale3d(1.5, 1.5, 1.5);
         opacity: 0;
@@ -50,19 +46,18 @@
     }
 
     @keyframes fadeIn {
-    from {
+      from {
         opacity: 0
-    }
-
-    to {
+      }
+      to {
         opacity: 1
+      }
     }
-}
 
-.fadeIn {
-    animation-name: fadeIn;
-    animation-duration: 1.5s;
-}
+    .fadeIn {
+      animation-name: fadeIn;
+      animation-duration: 1.5s;
+    }
 
     body {
       /* background: url('./img/bg_ho.png') no-repeat center center fixed;
@@ -83,36 +78,39 @@
     .tutorial {
       background: url('img/Tutorial1.png') top center no-repeat;
       background-size: contain;
-      width: 20%;
-      margin: 0;
+      height: 21%;
+      width: auto;
       margin-top: 10px;
-      padding-left: 50px;
-      padding-right: 50px;
-      padding-top: 6%;
-      padding-bottom: 40px;
       position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .tutorial__title {
       text-transform: uppercase;
       color: #460000;
-      font-size: 14px;
+      font-size: 12px;
       font-weight: bold;
       text-align: center;
+      margin-left: 20%;
+      margin-right: 20%;
+      margin-top: 5.5%;
     }
 
     .wrapper {
       display: flex;
-      width: 55%;
+      width: 50%;
+      height: 9%;
       justify-content: space-between;
+      align-items: center;
       position: absolute;
       bottom: 0;
-      margin-bottom: 1.2%;
     }
 
-    .object {
+    .object-name {
       color: #4f0101;
-      font-size: 15px;
+      font-size: 13px;
     }
 
     .footer {
@@ -328,14 +326,113 @@
       margin-top: 10px;
     }
 
-    /* .var3 {
+    .var1 {
       display: none;
     }
 
-    .var1 {
+    .var2 {
       display: none;
-    } */
-  </style>
+    }
+
+    .var3 {
+      display: none;
+    }
+
+    @media (min-width: 730px) {
+      .tutorial {
+        height: 19%;
+      }
+
+      .tutorial__title {
+        margin-top: 5%;
+        font-size: 13px;
+      }
+
+      .wrapper {
+        width: 55%;
+        height: 8.5%;
+      }
+
+      .object-name {
+        font-size: 14px;
+      }
+    }
+
+    @media (min-width: 810px) {
+      .tutorial {
+        height: 21%;
+      }
+
+      .tutorial__title {
+        font-size: 14px;
+      }
+
+      .wrapper {
+        width: 53%;
+        height: 10%;
+      }
+
+      .object-name {
+        font-size: 16px;
+      }
+    }
+
+    @media (min-width: 900px) {
+      .tutorial {
+        height: 19%;
+        width: 30%;
+      }
+
+      .tutorial__title {
+        margin-top: 0;
+        font-size: 17px;
+      }
+
+      .wrapper {
+        width: 50%;
+        height: 6.5%;
+      }
+
+      .object-name {
+        font-size: 18px;
+      }
+    }
+
+    @media (min-width: 1350px) {
+      .tutorial__title {
+        font-size: 22px;
+      }
+
+      .object-name {
+        font-size: 22px;
+      }
+    }
+
+    @media (min-width: 1600px) {
+      .tutorial {
+        height: 21%;
+      }
+
+      .tutorial__title {
+        font-size: 27px;
+      }
+
+      .object-name {
+        font-size: 25px;
+      }
+    }
+
+    @media (min-width: 1800px) {
+      .tutorial {
+        height: 24%;
+        width: 25%;
+      }
+
+      .wrapper {
+        height: 9%;
+      }
+    }
+</style>
 </head>
 
 <body>
@@ -378,20 +475,20 @@
 
   <img src="./img/ho_gui.png" alt="footer" class="footer">
   <div class="wrapper">
-    <div class="object var1 game1">Mirror</div>
-    <div class="object var1 game1">Ballet Dancer</div>
-    <div class="object var1 game1">Perfume</div>
-    <div class="object var1 game1">Comb</div>
+    <div class="object-name var1">Mirror</div>
+    <div class="object-name var1">Ballet Dancer</div>
+    <div class="object-name var1">Perfume</div>
+    <div class="object-name var1">Comb</div>
 
-    <div class="object var2 game2">Playing card</div>
-    <div class="object var2 game2">Purse</div>
-    <div class="object var2 game2">Glass bird</div>
-    <div class="object var2 game2">Apple</div>
+    <div class="object-name var2">Playing card</div>
+    <div class="object-name var2">Purse</div>
+    <div class="object-name var2">Glass bird</div>
+    <div class="object-name var2">Apple</div>
 
-    <div class="object var3 game3">Book</div>
-    <div class="object var3 game3">Basket</div>
-    <div class="object var3 game3">Fan</div>
-    <div class="object var3 game3">Shoe</div>
+    <div class="object-name var3">Book</div>
+    <div class="object-name var3">Basket</div>
+    <div class="object-name var3">Fan</div>
+    <div class="object-name var3">Shoe</div>
   </div>
 
   <div class="win">
@@ -404,7 +501,9 @@
 
 
   <script>
-
+    let game1 = document.querySelectorAll('.var1'),
+      game2 = document.querySelectorAll('.var2'),
+      game3 = document.querySelectorAll('.var3');
 
     let mirror = document.querySelector('.mirror'),
       parfume = document.querySelector('.parfume'),
@@ -418,69 +517,52 @@
       basket = document.querySelector('.basket'),
       fan = document.querySelector('.fan'),
       shoe = document.querySelector('.shoe'),
-      objects,
+      objectsNames = document.querySelectorAll('.object-name'),
       bg = document.querySelector('.bg'),
       win = document.querySelector('.win');
 
-    let all = [mirror, balerina, parfume, comb, playingCard, purse, glassBird, apple, book, basket, fan, shoe]
-    let option1 = [mirror, balerina, parfume, comb];
-    let option2 = [playingCard, purse, glassBird, apple];
-    let option3 = [book, basket, fan, shoe];
-    let option = [];
+    let all = [mirror, balerina, parfume, comb, playingCard, purse, glassBird, apple, book, basket, fan, shoe],
+      arr1 = [mirror, balerina, parfume, comb],
+      arr2 = [playingCard, purse, glassBird, apple],
+      arr3 = [book, basket, fan, shoe],
+      arr = [];
 
-    let game1 = document.querySelectorAll('.var1'),
-        game2 = document.querySelectorAll('.var2'),
-        game3 = document.querySelectorAll('.var3');
+    let objectsNames1 = document.querySelectorAll('.wrapper .var1'),
+      objectsNames2 = document.querySelectorAll('.wrapper .var2'),
+      objectsNames3 = document.querySelectorAll('.wrapper .var3');
 
-        function startGame(game) {
-          game.forEach((item) => {
-          item.style.display = "block";
-        });
-        }
-        function endGame(game) {
-          game.forEach((item) => {
-          item.style.display = "none";
-        });
-        }
+    // Выбираем одну из трёх игр (1, 2 или 3)
+    let gameID = 1;
 
+    switch (gameID) {
+      case 1:
         startGame(game1);
-        endGame(game3);
-        endGame(game2);
+        arr = arr1;
+        objects = objectsNames1;
+        break;
+      case 2:
+        startGame(game2);
+        arr = arr2;
+        objects = objectsNames2;
+        break;
+      case 3:
+        startGame(game3);
+        arr = arr3;
+        objects = objectsNames3;
+        break;
+    }
 
-        let objects1 = document.getElementsByClassName('.game1'),
-        objects2 = document.getElementsByClassName('.game2'),
-        objects3 = document.getElementsByClassName('.game3');
+    function startGame(game) {
+      game.forEach((item) => {
+        item.style.display = "block";
+      });
+    }
 
-        console.log(objects);
-        console.log(objects1);
-        console.log(objects2);
-        console.log(objects3);
-
-        if (game1[0].style.display != 'none') {
-          option = option1;
-          objects = objects1;
-          console.log(objects);
-          console.log('1111111111111');
-        } else if (game2[0].style.display != 'none') {
-          option = option2;
-          objects = objects2;
-          console.log(objects);
-          console.log('22222222');
-
-        } else if (game3[0].style.display != 'none') {
-          option = option3;
-          objects = objects3;
-          console.log(objects);
-          console.log('333333333');
-
-        }
-        console.log(objects);
-
-
+    // Вешаем на все предметы обработчик событий
     all.forEach((item, i) => {
       item.addEventListener('click', () => {
         item.classList.add('fadeOut');
-        objects[i].style.textDecoration = 'line-through'
+        objectsNames[i].style.textDecoration = 'line-through';
         setTimeout(displayNone, 1500, item);
         clearInterval(timerId);
         timerId = setTimeout(help, 5000);
@@ -495,7 +577,7 @@
     function help() {
       for (i = 0; i < objects.length; i++) {
         if (objects[i].style.textDecoration == '') {
-          option[i].classList.add('pulse');
+          arr[i].classList.add('pulse');
           break;
         }
       }
@@ -511,93 +593,8 @@
         if (find == 4) {
           win.style.display = 'block';
         }
-
       }
     }
-
-    // mirror.addEventListener('click', () => {
-    //   mirror.classList.add('fadeOut');
-    //   objects[0].style.textDecoration = 'line-through';
-    //   setTimeout(displayNone, 1500, mirror);
-    //   setTimeout(help, 5000);
-    // });
-
-    // balerina.addEventListener('click', () => {
-    //   balerina.classList.add('fadeOut');
-    //   objects[1].style.textDecoration = 'line-through';
-    //   setTimeout(displayNone, 1500, balerina);
-    //   setTimeout(help, 5000);
-    // });
-
-    // parfume.addEventListener('click', () => {
-    //   parfume.classList.add('fadeOut');
-    //   objects[2].style.textDecoration = 'line-through';
-    //   setTimeout(displayNone, 1500, parfume);
-    //   setTimeout(help, 5000);
-    // });
-
-    // comb.addEventListener('click', () => {
-    //   comb.classList.add('fadeOut');
-    //   objects[3].style.textDecoration = 'line-through';
-    //   setTimeout(displayNone, 1500, comb);
-    //   setTimeout(help, 5000);
-    // });
-
-    // playingCard.addEventListener('click', () => {
-    //   playingCard.classList.add('fadeOut');
-    //   objects[0].style.textDecoration = 'line-through';
-    //   setTimeout(displayNone, 1500, playingCard);
-    //   setTimeout(help, 5000);
-    // });
-
-    // purse.addEventListener('click', () => {
-    //   purse.classList.add('fadeOut');
-    //   objects[1].style.textDecoration = 'line-through';
-    //   setTimeout(displayNone, 1500, purse);
-    //   setTimeout(help, 5000);
-    // });
-
-    // glassBird.addEventListener('click', () => {
-    //   glassBird.classList.add('fadeOut');
-    //   objects[2].style.textDecoration = 'line-through';
-    //   setTimeout(displayNone, 1500, glassBird);
-    //   setTimeout(help, 5000);
-    // });
-
-    // apple.addEventListener('click', () => {
-    //   apple.classList.add('fadeOut');
-    //   objects[3].style.textDecoration = 'line-through';
-    //   setTimeout(displayNone, 1500, apple);
-    //   setTimeout(help, 5000);
-    // });
-
-    // book.addEventListener('click', () => {
-    //   book.classList.add('fadeOut');
-    //   objects[0].style.textDecoration = 'line-through'
-    //   setTimeout(displayNone, 1500, book);
-    //   setTimeout(help, 5000);
-    // });
-
-    // basket.addEventListener('click', () => {
-    //   basket.classList.add('fadeOut');
-    //   objects[1].style.textDecoration = 'line-through';
-    //   setTimeout(displayNone, 1500, basket);
-    //   setTimeout(help, 5000);
-    // });
-
-    // fan.addEventListener('click', () => {
-    //   fan.classList.add('fadeOut');
-    //   objects[2].style.textDecoration = 'line-through'
-    //   setTimeout(displayNone, 1500, fan);
-    //   setTimeout(help, 5000);
-    // });
-
-    // shoe.addEventListener('click', () => {
-    //   shoe.classList.add('fadeOut');
-    //   objects[3].style.textDecoration = 'line-through'
-    //   setTimeout(displayNone, 1500, shoe);
-    //   setTimeout(help, 5000);
-    // });
   </script>
 </body>
 
