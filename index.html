@@ -6,14 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Seekers Notes</title>
+  <link href="http://allfont.ru/allfont.css?fonts=fritz-quadrata-cyrillic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://nomail.com.ua/api/font-face/19926.css" type="text/css">
   <style>
     @keyframes pulse {
       from {
         transform: scale3d(1, 1, 1)
       }
+
       50% {
         transform: scale3d(1.05, 1.05, 1.05)
       }
+
       to {
         transform: scale3d(1, 1, 1)
       }
@@ -31,9 +35,11 @@
         transform: scale3d(1, 1, 1);
         z-index: 4;
       }
+
       50% {
         transform: scale3d(1.25, 1.25, 1.25)
       }
+
       to {
         transform: scale3d(1.5, 1.5, 1.5);
         opacity: 0;
@@ -49,6 +55,7 @@
       from {
         opacity: 0
       }
+
       to {
         opacity: 1
       }
@@ -59,6 +66,10 @@
       animation-duration: 1.5s;
     }
 
+    html {
+      height: 100%;
+    }
+
     body {
       /* background: url('./img/bg_ho.png') no-repeat center center fixed;
       background-size: cover; */
@@ -66,6 +77,7 @@
       flex-direction: column;
       align-items: center;
       margin: 0;
+      height: 100%;
     }
 
     .bg {
@@ -91,6 +103,7 @@
       text-transform: uppercase;
       color: #460000;
       font-size: 12px;
+      font-family: 'Friz Quadrata Cyrillic', serif;
       font-weight: bold;
       text-align: center;
       margin-left: 20%;
@@ -111,12 +124,14 @@
     .object-name {
       color: #4f0101;
       font-size: 13px;
+      font-family: 'AlbertusMedium', serif;
     }
 
     .footer {
       position: absolute;
       bottom: 0;
       width: 70%;
+      content: url('./img/ho_gui.png');
     }
 
     /* var1 */
@@ -127,6 +142,7 @@
       position: absolute;
       top: 35%;
       left: 18%;
+      content: url('./img/mirror.png');
     }
 
     .mirror_cover {
@@ -135,6 +151,7 @@
       position: absolute;
       top: 39%;
       left: 19.1%;
+      content: url('./img/mirror_cover.png');
     }
 
     .parfume {
@@ -143,6 +160,7 @@
       position: absolute;
       top: 60%;
       left: 27%;
+      content: url('./img/parfume_rotate.png');
     }
 
     .parfume_cover {
@@ -151,6 +169,7 @@
       position: absolute;
       top: 65.9%;
       left: 26.5%;
+      content: url('./img/parfume_cover.png');
     }
 
     .balerina {
@@ -159,6 +178,7 @@
       position: absolute;
       top: 40.5%;
       left: 52.5%;
+      content: url('./img/balerina.png');
     }
 
     .comb {
@@ -167,6 +187,7 @@
       position: absolute;
       top: 46%;
       left: 85%;
+      content: url('./img/comb_rotate.png');
     }
 
     .comb_cover {
@@ -175,6 +196,7 @@
       position: absolute;
       top: 45%;
       left: 86.8%;
+      content: url('./img/comb_cover.png');
     }
 
     /* var2 */
@@ -184,6 +206,7 @@
       position: absolute;
       top: 49.8%;
       left: 79.5%;
+      content: url('./img/playing_card_rotate.png');
     }
 
     .playing_card_cover {
@@ -192,6 +215,7 @@
       position: absolute;
       top: 44.9%;
       left: 82.1%;
+      content: url('./img/playing_card_cover.png');
     }
 
     .purse {
@@ -200,6 +224,7 @@
       position: absolute;
       top: 58%;
       left: 27%;
+      content: url('./img/purse_rotate.png');
     }
 
     .purse_cover {
@@ -208,6 +233,7 @@
       position: absolute;
       top: 65.1%;
       left: 26.3%;
+      content: url('./img/purse_cover.png');
     }
 
     .glass_bird {
@@ -216,6 +242,7 @@
       position: absolute;
       top: 22%;
       left: 24.2%;
+      content: url('./img/glass_bird.png');
     }
 
     .apple {
@@ -224,6 +251,7 @@
       position: absolute;
       top: 49%;
       left: 61%;
+      content: url('./img/apple.png');
     }
 
     .apple_cover {
@@ -232,6 +260,7 @@
       position: absolute;
       top: 53.7%;
       left: 57.8%;
+      content: url('./img/apple_cover.png');
     }
 
     /* var3 */
@@ -242,6 +271,7 @@
       position: absolute;
       top: 58.5%;
       left: 66.5%;
+      content: url('./img/book.png');
       transform: rotate(-5deg);
     }
 
@@ -251,6 +281,7 @@
       position: absolute;
       top: 57.2%;
       left: 69%;
+      content: url('./img/book_cover.png');
     }
 
     .basket {
@@ -259,6 +290,7 @@
       position: absolute;
       top: 45%;
       left: 49%;
+      content: url('./img/basket.png');
     }
 
     .fan {
@@ -267,6 +299,7 @@
       position: absolute;
       top: 50.5%;
       left: 32%;
+      content: url('./img/fan_rotate.png');
     }
 
     .fan_cover1 {
@@ -275,6 +308,7 @@
       position: absolute;
       top: 49.4%;
       left: 29.4%;
+      content: url('./img/fan_cover1.png');
     }
 
     .fan_cover2 {
@@ -283,6 +317,7 @@
       position: absolute;
       top: 49%;
       left: 34.6%;
+      content: url('./img/fan_cover2.png');
     }
 
     .shoe {
@@ -291,18 +326,25 @@
       position: absolute;
       top: 78%;
       left: 52%;
+      content: url('./img/shoe_scale.png');
     }
 
     .win {
-      display: none;
       z-index: 10;
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      display: none;
+      overflow: hidden;
     }
 
     .logo {
       display: block;
-      width: 70%;
-      margin: 20px auto;
-      margin-bottom: 0px;
+      width: 55%;
+      margin: 0 auto;
+      margin-top: 5%;
+      content: url('./img/logo.png');
     }
 
     .button {
@@ -310,20 +352,26 @@
       background-size: contain;
       border: none;
       color: #0d2900;
-      font-size: 30px;
-      line-height: 10.82px;
+      font-family: 'Friz Quadrata Cyrillic', serif;
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: -0.83px;
       text-transform: uppercase;
-      padding: 40px 75px;
+      padding: 20px 50px;
       display: block;
       margin: 0 auto;
       outline: none;
+      cursor: pointer;
     }
 
     .google {
       display: block;
-      margin: 0 auto;
       width: 15%;
+      margin-left: auto;
+      margin-right: auto;
       margin-top: 10px;
+      margin-bottom: 10%;
+      content: url('./img/google.png');
     }
 
     .var1 {
@@ -337,6 +385,7 @@
     .var3 {
       display: none;
     }
+
 
     @media (min-width: 730px) {
       .tutorial {
@@ -396,6 +445,20 @@
       .object-name {
         font-size: 18px;
       }
+
+      .logo {
+        width: 60%;
+      }
+
+      .button {
+        font-size: 20px;
+        padding: 55px 95px;
+      }
+
+      .google {
+        width: 13%;
+        margin-bottom: 20%;
+      }
     }
 
     @media (min-width: 1350px) {
@@ -432,48 +495,53 @@
         height: 9%;
       }
     }
-</style>
+  </style>
 </head>
 
 <body>
   <img src="./img/bg_ho.png" alt="bg" class="bg">
 
   <!-- first play -->
-  <img src="./img/mirror.png" alt="mirror" class="mirror var1">
-  <img src="./img/balerina.png" alt="balerina" class="balerina var1">
-  <img src="./img/comb_rotate.png" alt="comb" class="comb var1">
-  <img src="./img/parfume_rotate.png" alt="parfume" class="parfume var1">
+  <img alt="mirror" class="mirror var1">
+  <img alt="balerina" class="balerina var1">
+  <img alt="comb" class="comb var1">
+  <img alt="parfume" class="parfume var1">
+  
 
-  <img src="./img/mirror_cover.png" alt="mirror_cover" class="mirror_cover var1">
-  <img src="./img/parfume_cover.png" alt="parfume_cover" class="parfume_cover var1">
-  <img src="./img/comb_cover.png" alt="comb_cover" class="comb_cover var1">
+  <!-- cover fragments -->
+  <img alt="mirror_cover" class="mirror_cover var1">
+  <img alt="parfume_cover" class="parfume_cover var1">
+  <img alt="comb_cover" class="comb_cover var1">
 
   <!-- second play -->
-  <img src="./img/playing_card_rotate.png" alt="playing_card" class="playing_card var2">
-  <img src="./img/purse_rotate.png" alt="purse" class="purse var2">
-  <img src="./img/glass_bird.png" alt="glass_bird" class="glass_bird var2">
-  <img src="./img/apple.png" alt="apple" class="apple var2">
+  <img alt="playing_card" class="playing_card var2">
+  <img alt="purse" class="purse var2">
+  <img alt="glass_bird" class="glass_bird var2">
+  <img alt="apple" class="apple var2">
+  
 
-  <img src="./img/playing_card_cover.png" alt="playing_card_cover" class="playing_card_cover var2">
-  <img src="./img/purse_cover.png" alt="purse_cover" class="purse_cover var2">
-  <img src="./img/apple_cover.png" alt="apple_cover" class="apple_cover var2">
+  <!-- cover -->
+  <img alt="playing_card_cover" class="playing_card_cover var2">
+  <img alt="purse_cover" class="purse_cover var2">
+  <img alt="apple_cover" class="apple_cover var2">
 
   <!-- third play  -->
-  <img src="./img/book.png" alt="book" class="book var3">
-  <img src="./img/basket.png" alt="basket" class="basket var3">
-  <img src="./img/fan_rotate.png" alt="fan" class="fan var3">
-  <img src="./img/shoe_scale.png" alt="shoe" class="shoe var3">
+  <img alt="book" class="book var3">
+  <img alt="basket" class="basket var3">
+  <img alt="fan" class="fan var3">
+  <img alt="shoe" class="shoe var3">
 
-  <img src="./img/book_cover.png" alt="book_cover" class="book_cover var3">
-  <img src="./img/fan_cover1.png" alt="fan_cover" class="fan_cover1 var3">
-  <img src="./img/fan_cover2.png" alt="fan_cover" class="fan_cover2 var3">
-  <!-- <img src="./img/fan_cover2.png" alt="fan_cover" class="fan_cover var3"> -->
+  <!-- cover -->
+  <img alt="book_cover" class="book_cover var3">
+  <img alt="fan_cover" class="fan_cover1 var3">
+  <img alt="fan_cover" class="fan_cover2 var3">
 
   <div class="tutorial pulse">
     <div class="tutorial__title">Find all the hidden objects!</div>
   </div>
 
-  <img src="./img/ho_gui.png" alt="footer" class="footer">
+  <img alt="footer" class="footer">
+
   <div class="wrapper">
     <div class="object-name var1">Mirror</div>
     <div class="object-name var1">Ballet Dancer</div>
@@ -493,46 +561,48 @@
 
   <div class="win">
     <img src="./img/bg_blur.png" alt="bg" class="bg">
-    <img src="./img/logo.png" alt="logo" class="logo">
+    <img alt="logo" class="logo">
     <button class="button fadeIn">Play free</button>
-    <img src="./img/google.png" alt="google" class="google">
-
+    <img alt="google" class="google">
   </div>
 
 
   <script>
     let game1 = document.querySelectorAll('.var1'),
-      game2 = document.querySelectorAll('.var2'),
-      game3 = document.querySelectorAll('.var3');
+        game2 = document.querySelectorAll('.var2'),
+        game3 = document.querySelectorAll('.var3');
 
     let mirror = document.querySelector('.mirror'),
-      parfume = document.querySelector('.parfume'),
-      balerina = document.querySelector('.balerina'),
-      comb = document.querySelector('.comb'),
-      playingCard = document.querySelector('.playing_card'),
-      purse = document.querySelector('.purse'),
-      glassBird = document.querySelector('.glass_bird'),
-      apple = document.querySelector('.apple'),
-      book = document.querySelector('.book'),
-      basket = document.querySelector('.basket'),
-      fan = document.querySelector('.fan'),
-      shoe = document.querySelector('.shoe'),
-      objectsNames = document.querySelectorAll('.object-name'),
-      bg = document.querySelector('.bg'),
-      win = document.querySelector('.win');
+        parfume = document.querySelector('.parfume'),
+        balerina = document.querySelector('.balerina'),
+        comb = document.querySelector('.comb'),
+        playingCard = document.querySelector('.playing_card'),
+        purse = document.querySelector('.purse'),
+        glassBird = document.querySelector('.glass_bird'),
+        apple = document.querySelector('.apple'),
+        book = document.querySelector('.book'),
+        basket = document.querySelector('.basket'),
+        fan = document.querySelector('.fan'),
+        shoe = document.querySelector('.shoe'),
+        objectsNames = document.querySelectorAll('.object-name'),
+        bg = document.querySelector('.bg'),
+        win = document.querySelector('.win');
 
     let all = [mirror, balerina, parfume, comb, playingCard, purse, glassBird, apple, book, basket, fan, shoe],
-      arr1 = [mirror, balerina, parfume, comb],
-      arr2 = [playingCard, purse, glassBird, apple],
-      arr3 = [book, basket, fan, shoe],
-      arr = [];
+        arr1 = [mirror, balerina, parfume, comb],
+        arr2 = [playingCard, purse, glassBird, apple],
+        arr3 = [book, basket, fan, shoe],
+        arr = [];
 
     let objectsNames1 = document.querySelectorAll('.wrapper .var1'),
-      objectsNames2 = document.querySelectorAll('.wrapper .var2'),
-      objectsNames3 = document.querySelectorAll('.wrapper .var3');
+        objectsNames2 = document.querySelectorAll('.wrapper .var2'),
+        objectsNames3 = document.querySelectorAll('.wrapper .var3');
 
+    function getRandomInt(max) {
+      return Math.floor(Math.random() * Math.floor(max));
+    }
     // Выбираем одну из трёх игр (1, 2 или 3)
-    let gameID = 1;
+    let gameID = getRandomInt(3) + 1;
 
     switch (gameID) {
       case 1:
@@ -591,10 +661,14 @@
           find += 1;
         }
         if (find == 4) {
-          win.style.display = 'block';
+          win.style.display = 'flex';
         }
       }
     }
+
+    // if(window.innerHeight > window.innerWidth){
+    //     alert("Please use Landscape!");
+    //     }
   </script>
 </body>
 
