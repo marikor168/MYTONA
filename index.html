@@ -71,8 +71,6 @@
     }
 
     body {
-      /* background: url('./img/bg_ho.png') no-repeat center center fixed;
-      background-size: cover; */
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -111,14 +109,32 @@
       margin-top: 5.5%;
     }
 
+    .footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 15%;
+      display: flex;
+      justify-content: center;
+
+    }
+    .footer__img {
+      position: absolute;
+      bottom: 0;
+      width: 70%;
+      content: url('./img/ho_gui.png');
+
+    }
+
     .wrapper {
       display: flex;
-      width: 50%;
-      height: 9%;
+      width: 55%;
+      /* height: 9%; */
       justify-content: space-between;
       align-items: center;
       position: absolute;
       bottom: 0;
+      padding-bottom: 1.5%;
     }
 
     .object-name {
@@ -127,11 +143,8 @@
       font-family: 'AlbertusMedium', serif;
     }
 
-    .footer {
-      position: absolute;
-      bottom: 0;
-      width: 70%;
-      content: url('./img/ho_gui.png');
+    img {
+      user-select: none;
     }
 
     /* var1 */
@@ -397,11 +410,6 @@
         font-size: 13px;
       }
 
-      .wrapper {
-        width: 55%;
-        height: 8.5%;
-      }
-
       .object-name {
         font-size: 14px;
       }
@@ -414,11 +422,6 @@
 
       .tutorial__title {
         font-size: 14px;
-      }
-
-      .wrapper {
-        width: 53%;
-        height: 10%;
       }
 
       .object-name {
@@ -435,11 +438,6 @@
       .tutorial__title {
         margin-top: 0;
         font-size: 17px;
-      }
-
-      .wrapper {
-        width: 50%;
-        height: 6.5%;
       }
 
       .object-name {
@@ -490,10 +488,6 @@
         height: 24%;
         width: 25%;
       }
-
-      .wrapper {
-        height: 9%;
-      }
     }
   </style>
 </head>
@@ -506,7 +500,7 @@
   <img alt="balerina" class="balerina var1">
   <img alt="comb" class="comb var1">
   <img alt="parfume" class="parfume var1">
-  
+
 
   <!-- cover fragments -->
   <img alt="mirror_cover" class="mirror_cover var1">
@@ -518,7 +512,7 @@
   <img alt="purse" class="purse var2">
   <img alt="glass_bird" class="glass_bird var2">
   <img alt="apple" class="apple var2">
-  
+
 
   <!-- cover -->
   <img alt="playing_card_cover" class="playing_card_cover var2">
@@ -540,23 +534,25 @@
     <div class="tutorial__title">Find all the hidden objects!</div>
   </div>
 
-  <img alt="footer" class="footer">
+  <div class="footer">
+    <img alt="footer" class="footer__img">
+    <div class="wrapper">
 
-  <div class="wrapper">
-    <div class="object-name var1">Mirror</div>
-    <div class="object-name var1">Ballet Dancer</div>
-    <div class="object-name var1">Perfume</div>
-    <div class="object-name var1">Comb</div>
+      <div class="object-name var1">Mirror</div>
+      <div class="object-name var1">Ballet Dancer</div>
+      <div class="object-name var1">Perfume</div>
+      <div class="object-name var1">Comb</div>
 
-    <div class="object-name var2">Playing card</div>
-    <div class="object-name var2">Purse</div>
-    <div class="object-name var2">Glass bird</div>
-    <div class="object-name var2">Apple</div>
+      <div class="object-name var2">Playing card</div>
+      <div class="object-name var2">Purse</div>
+      <div class="object-name var2">Glass bird</div>
+      <div class="object-name var2">Apple</div>
 
-    <div class="object-name var3">Book</div>
-    <div class="object-name var3">Basket</div>
-    <div class="object-name var3">Fan</div>
-    <div class="object-name var3">Shoe</div>
+      <div class="object-name var3">Book</div>
+      <div class="object-name var3">Basket</div>
+      <div class="object-name var3">Fan</div>
+      <div class="object-name var3">Shoe</div>
+    </div>
   </div>
 
   <div class="win">
@@ -569,38 +565,35 @@
 
   <script>
     let game1 = document.querySelectorAll('.var1'),
-        game2 = document.querySelectorAll('.var2'),
-        game3 = document.querySelectorAll('.var3');
+      game2 = document.querySelectorAll('.var2'),
+      game3 = document.querySelectorAll('.var3');
 
     let mirror = document.querySelector('.mirror'),
-        parfume = document.querySelector('.parfume'),
-        balerina = document.querySelector('.balerina'),
-        comb = document.querySelector('.comb'),
-        playingCard = document.querySelector('.playing_card'),
-        purse = document.querySelector('.purse'),
-        glassBird = document.querySelector('.glass_bird'),
-        apple = document.querySelector('.apple'),
-        book = document.querySelector('.book'),
-        basket = document.querySelector('.basket'),
-        fan = document.querySelector('.fan'),
-        shoe = document.querySelector('.shoe'),
-        objectsNames = document.querySelectorAll('.object-name'),
-        bg = document.querySelector('.bg'),
-        win = document.querySelector('.win');
+      parfume = document.querySelector('.parfume'),
+      balerina = document.querySelector('.balerina'),
+      comb = document.querySelector('.comb'),
+      playingCard = document.querySelector('.playing_card'),
+      purse = document.querySelector('.purse'),
+      glassBird = document.querySelector('.glass_bird'),
+      apple = document.querySelector('.apple'),
+      book = document.querySelector('.book'),
+      basket = document.querySelector('.basket'),
+      fan = document.querySelector('.fan'),
+      shoe = document.querySelector('.shoe'),
+      objectsNames = document.querySelectorAll('.object-name'),
+      bg = document.querySelector('.bg'),
+      win = document.querySelector('.win');
 
     let all = [mirror, balerina, parfume, comb, playingCard, purse, glassBird, apple, book, basket, fan, shoe],
-        arr1 = [mirror, balerina, parfume, comb],
-        arr2 = [playingCard, purse, glassBird, apple],
-        arr3 = [book, basket, fan, shoe],
-        arr = [];
+      arr1 = [mirror, balerina, parfume, comb],
+      arr2 = [playingCard, purse, glassBird, apple],
+      arr3 = [book, basket, fan, shoe],
+      arr = [];
 
     let objectsNames1 = document.querySelectorAll('.wrapper .var1'),
-        objectsNames2 = document.querySelectorAll('.wrapper .var2'),
-        objectsNames3 = document.querySelectorAll('.wrapper .var3');
+      objectsNames2 = document.querySelectorAll('.wrapper .var2'),
+      objectsNames3 = document.querySelectorAll('.wrapper .var3');
 
-    function getRandomInt(max) {
-      return Math.floor(Math.random() * Math.floor(max));
-    }
     // Выбираем одну из трёх игр (1, 2 или 3)
     let gameID = getRandomInt(3) + 1;
 
@@ -622,12 +615,6 @@
         break;
     }
 
-    function startGame(game) {
-      game.forEach((item) => {
-        item.style.display = "block";
-      });
-    }
-
     // Вешаем на все предметы обработчик событий
     all.forEach((item, i) => {
       item.addEventListener('click', () => {
@@ -639,6 +626,16 @@
         winner();
       });
     });
+
+    function getRandomInt(max) {
+      return Math.floor(Math.random() * Math.floor(max));
+    }
+
+    function startGame(game) {
+      game.forEach((item) => {
+        item.style.display = "block";
+      });
+    }
 
     function displayNone(item) {
       item.style.display = 'none';
@@ -666,9 +663,9 @@
       }
     }
 
-    // if(window.innerHeight > window.innerWidth){
-    //     alert("Please use Landscape!");
-    //     }
+    if (window.innerHeight > window.innerWidth) {
+      alert("Please rotate the device!");
+    }
   </script>
 </body>
 
